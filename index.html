@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lalu Prasad Aroori — Portfolio</title>
+  <meta name="description" content="Lalu Prasad Aroori — Cloud, DSA, AI, Web Dev. Projects, resume and contact." />
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#9aa4b2; --accent:#4f46e5; --glass: rgba(255,255,255,0.04);
+      --maxw:1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;color:#e6eef6;background:linear-gradient(180deg,var(--bg),#071025);-webkit-font-smoothing:antialiased}
+    .wrap{max-width:var(--maxw);margin:40px auto;padding:28px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .avatar{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,#3b82f6,#8b5cf6);display:grid;place-items:center;color:white;font-weight:700}
+    h1{margin:0;font-size:20px}
+    p.lead{margin:4px 0 0;color:var(--muted);font-size:13px}
+    nav{display:flex;gap:12px}
+    nav a{color:var(--muted);text-decoration:none;font-size:14px;padding:8px;border-radius:8px}
+    nav a:hover{color:white;background:var(--glass)}
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;margin-top:28px}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:20px;border-radius:14px;box-shadow:0 6px 20px rgba(2,6,23,0.6);backdrop-filter: blur(6px)}
+    .intro h2{margin:0 0 8px;font-size:26px}
+    .intro p{color:var(--muted);margin:0 0 14px}
+    .cta{display:flex;gap:10px}
+    .btn{padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600;border:0;cursor:pointer}
+    .btn-primary{background:var(--accent);color:white}
+    .btn-ghost{background:transparent;color:var(--muted);border:1px solid rgba(255,255,255,0.04)}
+    .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+    .skill{background:#071428;padding:8px 10px;border-radius:8px;font-size:13px;color:var(--muted)}
+    .sidebar .stat{display:flex;justify-content:space-between;padding:10px 12px;border-radius:10px;margin-bottom:10px;background:linear-gradient(90deg,rgba(255,255,255,0.01),transparent)}
+    section.projects{margin-top:22px}
+    .projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .project{padding:14px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent)}
+    .project h3{margin:0 0 6px;font-size:16px}
+    .project p{margin:0;color:var(--muted);font-size:13px}
+    footer{margin-top:28px;padding:18px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent);display:flex;justify-content:space-between;align-items:center}
+    .socials a{margin-left:8px;color:var(--muted);text-decoration:none}
+    .mobile-nav{display:none}
+    /* responsive */
+    @media (max-width:980px){.hero{grid-template-columns:1fr}.projects-grid{grid-template-columns:repeat(2,1fr)}.sidebar{order:-1}}
+    @media (max-width:640px){.wrap{margin:18px;padding:16px}.projects-grid{grid-template-columns:1fr}.nav-desktop{display:none}.mobile-nav{display:flex;gap:8px}}
+    /* small touches */
+    .tag{font-size:12px;padding:6px 8px;border-radius:999px;background:rgba(255,255,255,0.02);color:var(--muted)}
+    .resume-link{display:inline-block;margin-top:10px}
+    .project .meta{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap}
+    input,textarea{font:inherit}
+    .contact-form{display:flex;flex-direction:column;gap:8px}
+    .contact-form input,.contact-form textarea{padding:10px;border-radius:8px;background:#041025;border:1px solid rgba(255,255,255,0.03);color:inherit}
+    .small{font-size:13px;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="avatar">LP</div>
+        <div>
+          <h1>Lalu Prasad Aroori</h1>
+          <p class="lead">Cloud · DSA · AI · Web Developer</p>
+        </div>
+      </div>
+      <nav class="nav-desktop">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+        <a class="btn btn-ghost" id="themeToggle" title="Toggle theme">Theme</a>
+      </nav>
+      <div class="mobile-nav">
+        <a class="btn btn-ghost" id="menuBtn">Menu</a>
+      </div>
+    </header>
+
+    <main class="hero">
+      <div class="card intro">
+        <h2>Hi — I'm Lalu. I build cloud-enabled apps and solve problems with algorithms.</h2>
+        <p>I'm a B.Tech student specializing in Cloud Computing, Data Structures & Algorithms and AI. I enjoy building practical projects, contributing to open-source, and learning new systems.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="#projects">See Projects</a>
+          <a class="btn btn-ghost" href="mailto:aroorilaluprasad@gmail.com">Hire / Contact</a>
+        </div>
+
+        <div id="skills" style="margin-top:18px">
+          <div class="small">Core Skills</div>
+          <div class="skills">
+            <span class="skill">Python</span>
+            <span class="skill">Java</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">HTML & CSS</span>
+            <span class="skill">AWS (EC2)</span>
+            <span class="skill">Machine Learning</span>
+            <span class="skill">DSA</span>
+          </div>
+        </div>
+
+        <div style="margin-top:18px">
+          <a class="resume-link small" href="#" onclick="downloadResume()">Download Resume (PDF)</a>
+        </div>
+      </div>
+
+      <aside class="card sidebar">
+        <div class="stat">
+          <div>
+            <div class="small">Location</div>
+            <div>India</div>
+          </div>
+          <div class="tag">Open to Internships</div>
+        </div>
+        <div class="stat">
+          <div>
+            <div class="small">Experience</div>
+            <div>Internships at Agratas & AICTE</div>
+          </div>
+          <div class="tag">Student</div>
+        </div>
+
+        <div style="margin-top:8px">
+          <div class="small">Contact</div>
+          <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap">
+            <a class="tag" href="mailto:aroorilaluprasad@gmail.com">Email</a>
+            <a class="tag" href="tel:+917013716541">Call</a>
+            <a class="tag" href="#contact">Message</a>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <section id="projects" class="card projects">
+      <h3 style="margin-top:0">Selected Projects</h3>
+      <div class="projects-grid">
+        <article class="project">
+          <h3>ClickCrafter — AI Banner Generator</h3>
+          <p>Automated banner & video generation for e-commerce promotions using AI.</p>
+          <div class="meta">
+            <span class="tag">Python</span>
+            <span class="tag">Pillow</span>
+            <span class="tag">OpenAI</span>
+          </div>
+        </article>
+
+        <article class="project">
+          <h3>EmoVision — Emotion Detection</h3>
+          <p>Facial emotion recognition system built using CNNs and OpenCV for real-time inference.</p>
+          <div class="meta">
+            <span class="tag">ML</span>
+            <span class="tag">OpenCV</span>
+            <span class="tag">Python</span>
+          </div>
+        </article>
+
+        <article class="project">
+          <h3>ResumeSpark</h3>
+          <p>Smart resume builder with live-preview, templates and export to PDF.</p>
+          <div class="meta">
+            <span class="tag">JavaScript</span>
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="card" style="margin-top:18px">
+      <h3>About me</h3>
+      <p class="small">I'm a second-year B.Tech student in CSE (AI). I like solving algorithmic problems, building cloud-enabled systems and experimenting with ML. Outside code I participate in hackathons and college clubs.</p>
+    </section>
+
+    <section id="contact" class="card" style="margin-top:18px">
+      <h3>Contact</h3>
+      <form class="contact-form" onsubmit="handleContact(event)">
+        <input type="text" id="name" placeholder="Your name" required />
+        <input type="email" id="email" placeholder="Your email" required />
+        <textarea id="message" rows="4" placeholder="Message" required></textarea>
+        <div style="display:flex;gap:8px;align-items:center">
+          <button class="btn btn-primary" type="submit">Send</button>
+          <div id="formResult" class="small" style="margin-left:8px"></div>
+        </div>
+      </form>
+    </section>
+
+    <footer>
+      <div>
+        <strong>Lalu Prasad Aroori</strong>
+        <div class="small">B.Tech — Cloud · AI · DSA</div>
+      </div>
+      <div class="socials">
+        <a href="#">LinkedIn</a>
+        <a href="#">GitHub</a>
+        <a href="#">Twitter</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Theme toggle (simple)
+    const themeToggle = document.getElementById('themeToggle');
+    themeToggle.addEventListener('click', ()=>{
+      if(document.documentElement.style.getPropertyValue('--bg') === '#0f1724'){
+        document.documentElement.style.setProperty('--bg','#f7fafc');
+        document.documentElement.style.setProperty('--card','#ffffff');
+        document.documentElement.style.setProperty('--muted','#334155');
+        document.documentElement.style.setProperty('--accent','#2563eb');
+      } else {
+        document.documentElement.style.setProperty('--bg','#0f1724');
+        document.documentElement.style.setProperty('--card','#0b1220');
+        document.documentElement.style.setProperty('--muted','#9aa4b2');
+        document.documentElement.style.setProperty('--accent','#4f46e5');
+      }
+    });
+
+    // Simple contact handler (client-side only) — uses mailto as fallback
+    function handleContact(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const result = document.getElementById('formResult');
+      if(!name || !email || !message){ result.textContent='Please fill all fields'; return }
+      // Attempt to open mail client
+      const subject = encodeURIComponent('Portfolio contact from '+name);
+      const body = encodeURIComponent('Name: '+name+'\nEmail: '+email+'\n\n'+message);
+      window.location.href = `mailto:aroorilaluprasad@gmail.com?subject=${subject}&body=${body}`;
+      result.textContent = 'Opening mail client...';
+    }
+
+    function downloadResume(){
+      // placeholder behaviour — in real deployment replace href with /assets/resume.pdf
+      alert('Replace this with a real PDF link in production.');
+    }
+
+    // Mobile menu (very small)
+    const menuBtn = document.getElementById('menuBtn');
+    menuBtn && menuBtn.addEventListener('click', ()=>{
+      const links = ['#about','#projects','#skills','#contact'];
+      let nav = 'Navigation:\n';
+      links.forEach(l=> nav += l + '\n');
+      alert('Use the page anchor links in the header to navigate — or open on desktop.');
+    });
+  </script>
+</body>
+</html>
